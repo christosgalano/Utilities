@@ -9,16 +9,16 @@
 
 class Timer {
 private:
-	std::chrono::time_point<std::chrono::steady_clock> m_StartTimepoint;
-	std::chrono::time_point<std::chrono::steady_clock> m_EndTimepoint;
+	std::chrono::time_point<std::chrono::steady_clock> start_timepoint;
+	std::chrono::time_point<std::chrono::steady_clock> end_timepoint;
 public:
 	Timer() {
-		m_StartTimepoint = std::chrono::steady_clock::now();
+		start_timepoint = std::chrono::steady_clock::now();
 	}
 	
 	void stop() {
-		m_EndTimepoint = std::chrono::steady_clock::now();
-		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTimepoint - m_StartTimepoint).count();
+		end_timepoint = std::chrono::steady_clock::now();
+		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end_timepoint - start_timepoint).count();
 		std::cout << "Duration: " << duration << " ms\n";
 	}
 };
