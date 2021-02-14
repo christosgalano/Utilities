@@ -56,7 +56,7 @@ namespace Inputter {
             std::cin >> choice;
             std::cout << '\n';
             if (std::cin.fail()) {  // If a previous extraction failed
-                std::cin.clear();   // Put us back in 'normal' operation mode
+                std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Remove the bad input
             }
 
