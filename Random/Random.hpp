@@ -8,7 +8,7 @@ private:
     std::uniform_int_distribution<> dist;
     std::random_device rd;
 public:
-    RandomInt(int low, int high) : re{rd()}, dist{low, high} {}
+    explicit RandomInt(int low, int high) : re{rd()}, dist{low, high} {}
 
     int operator()() { return dist(re); }  // Get a random integer in [low:high]
 
@@ -23,7 +23,7 @@ private:
     std::uniform_real_distribution<double> dist;
     std::random_device rd;
 public:
-    RandomDouble(double low, double high) : re{rd()}, dist{low, high} {}
+    explicit RandomDouble(double low, double high) : re{rd()}, dist{low, high} {}
 
     double operator()() { return dist(re); }  // Get a random double in [low:high)
     
