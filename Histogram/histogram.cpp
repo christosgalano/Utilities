@@ -11,7 +11,7 @@
 using namespace std;
 
 // The following program does not take into account cases like we've,that's etc.
-// In those cases after the removal of punctuation the remainig word will be weve, thats etc.
+// In those cases after the removal of punctuation the remaining word will be weve, thats etc.
 
 int main() {
     ifstream from {"sample_text_2.txt"};
