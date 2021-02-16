@@ -24,13 +24,12 @@ int main() {
     // Store the words - istream_iterator ignores white space
     vector<string> words {istream_iterator<string>{from}, istream_iterator<string>{}};
 
-    // Make all words lower_case
-    for (auto& s : words)
+    // Make all words lower_case and remove punctuation
+    for (auto& s : words) {
         for_each(s.begin(), s.end(), [] (char& c) { c = ::tolower(c); } );
-
-    // Remove punctuation
-    for_each(words.begin(), words.end(), [] (string& s) { s.erase (remove_if (s.begin(), s.end(), ::ispunct), s.end() ); } );
-
+        s.erase(remove_if(s.begin(), s.end(), ::ispunct), s.end());
+    }
+    
     // Perhaps a string consisted only of a "punctuation_symbol" so after we removed the punctuation_symbol that string will now be empty.
     // That is why we erase those strings - besides they have no use.
     words.erase(remove(words.begin(), words.end(), ""), words.end());
