@@ -55,7 +55,7 @@ int main() {
         vec.push_back(p);
 
     // Custom compare function: we sort in decreasing order based on number_of_occurrences.
-    // If the have the same number_of_occurrences we sort them alphabetically.
+    // If they have the same number_of_occurrences we sort them alphabetically.
     auto comp = [] (const entry& p1, const entry& p2) -> bool {
         return p1.second == p2.second ? p1.first < p2.first : p1.second > p2.second;
     };
