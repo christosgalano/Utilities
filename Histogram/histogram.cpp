@@ -42,7 +42,7 @@ int main() {
     // we remove punctuation 10.23 will become 1023. So if you want to find if a string contains a real number you can use this regex expression:
     // (regex_match(s, regex("^([[:digit:]]+)(\\.|\\,)([[:digit:]]+)$")))
 
-    // Map each word to each number_of_occurrences
+    // Map each word to a number_of_occurrences
     map<string, int> occur;
     for (const auto& s : words)
         ++occur[s];
