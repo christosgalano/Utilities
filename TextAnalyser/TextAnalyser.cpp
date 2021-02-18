@@ -13,7 +13,7 @@ TextAnalyser::TextAnalyser(const std::string& in_path)
 {
     std::ifstream text{path};
     if (!text)
-        throw std::runtime_error("Error upon opening the file...");
+        throw std::runtime_error("Error upon opening the file");
     
     // Read the text - istream_iterator ignores white space
     words = std::vector<std::string> { std::istream_iterator<std::string>{text}, std::istream_iterator<std::string>{} };
@@ -61,7 +61,7 @@ size_t TextAnalyser::get_no_occurrences(const std::string& word) {
 
 std::vector<std::string> TextAnalyser::get_most_used_words(size_t limit) {
     if (!limit)
-        throw std::invalid_argument("Number of words must be 1 or greater.");
+        throw std::invalid_argument("Number of words must be 1 or greater");
 
     std::vector<std::string> most_used;
     for (size_t i = 0; i < limit; ++i)
