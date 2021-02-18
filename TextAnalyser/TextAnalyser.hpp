@@ -24,9 +24,9 @@ public:
 
     size_t get_max_length() const { return max_length; }
 
-    std::string get_most_used_word() const { return entries[0].first; }  // entries is sorted in decreasing order
-
     size_t get_no_occurrences(const std::string& word);
+    
+    std::string get_most_used_word() const { return entries[0].first; }  // entries is sorted in decreasing order
 
     std::vector<std::string> get_most_used_words(size_t limit);
     
