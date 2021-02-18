@@ -30,7 +30,7 @@ TextAnalyser::TextAnalyser(const std::string& in_path)
     // Erase the "" strings
     words.erase(remove(words.begin(), words.end(), ""), words.end());
 
-    // Map each word to its number_of_occurrences
+    // Map each word to its no_occurrences
     for (const auto& s : words)
         ++occurrences[s];
 
