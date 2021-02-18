@@ -15,7 +15,7 @@ private:
 
     std::vector<std::string> words; // Words of the text
     
-    std::unordered_map<std::string, int> occurrences;   // Maps each words to its no_occurrences in the text
+    std::unordered_map<std::string, int> occurrences;   // Maps each word to its no_occurrences in the text
     
     std::vector<entry> entries; // Stores the pairs of occurences, because we want to sort them in decreasing order based on value
 
