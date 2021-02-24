@@ -44,7 +44,7 @@ namespace ColouredLogger {
         system("clear"); 
     }
 
-    inline void ignoreLine() {
+    inline void IgnoreLine() {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 }
