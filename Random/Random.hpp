@@ -27,7 +27,7 @@ public:
 
     double operator()() { return dist(re); }  // Get a random double in [low:high)
     
-    void change_bounds(int lower_bound, int upper_bound) {
+    void change_bounds(double lower_bound, double upper_bound) {
         dist.param( decltype(dist)::param_type(lower_bound, upper_bound) );
     }
 };
