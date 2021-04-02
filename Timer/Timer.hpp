@@ -1,11 +1,10 @@
 #include <iostream>
 #include <chrono>
 
-// Simple Timer class
-// Example of usage:
-// Timer t;
-// foo();
-// t.stop();
+/* Example of usage:
+   Timer t;
+   foo();
+   t.stop(); */
 
 class Timer {
 private:
